@@ -1,1 +1,142 @@
-<!DOCTYPE html><html><body><div id="app"></div>div><script>window.onload=()=>{const p=new URLSearchParams(location.search);const d=p.get('d');if(d){try{const o=JSON.parse(decodeURIComponent(atob(d)));document.getElementById('app').innerHTML='<h1>'+o.name+'</h1><p>ID: '+o.id+'</p><p>MFG: '+o.mfg+'</p><p>EXP: '+o.exp+'</p>'}catch(e){document.getElementById('app').innerText=e}}else{document.getElementById('app').innerText='No data'}}</script></body></html></script></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xac Thuc San Pham</title>
+  <style>
+    body { font-family: sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }
+    .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h1 { color: #2e7d32; }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="app">
+      <h1>Dang tai...</h1>
+    </div>div>
+  <script>
+  window.onload = () => {
+        const p = new URLSearchParams(location.search);
+        const d = p.get('d');
+        if (d) {
+                  try {
+                                const o = JSON.parse(decodeURIComponent(escape(atob(d))));
+                                document.getElementById('app').innerHTML = `
+                                                <h1>${o.pn || 'San pham'}</h1>
+                                                                <p>Cong ty: ${o.cn || '-'}</p>
+                                                                                <p>Ngay SX: ${o.pd || '-'}</p>
+                                                                                                <p>Han dung: ${o.sl || '-'} ngay</p>
+                                                                                                            `;
+                  } catch (e) {
+                                document.getElementById('app').innerText = 'Loi du lieu';
+                  }
+        } else {
+                  document.getElementById('app').innerText = 'Khong co du lieu';
+        }
+  };
+  </script>
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">Loading...</div>div>
+    <script>
+      window.onload = () => {
+            const p = new URLSearchParams(location.search);
+            const d = p.get('d');
+            if (d) {
+                      try {
+                                    const o = JSON.parse(decodeURIComponent(escape(atob(d))));
+                                    document.getElementById('app').innerHTML = '<h1>' + (o.pn || 'Product') + '</h1>' +
+                                                      '<p>Company: ' + (o.cn || '-') + '</p>' +
+                                                      '<p>MFG: ' + (o.pd || '-') + '</p>' +
+                                                      '<p>SL: ' + (o.sl || '-') + ' days</p>';
+                      } catch (e) {
+                                    document.getElementById('app').innerText = 'Data Error';
+                      }
+            } else {
+                      document.getElementById('app').innerText = 'No Data';
+            }
+      };
+    </script>
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">Loading...</div>div>
+    <script>
+      window.onload = () => {
+            const p = new URLSearchParams(location.search);
+            const d = p.get('d');
+            if (d) {
+                      try {
+                                    const o = JSON.parse(decodeURIComponent(escape(atob(d))));
+                  document.getElementById('app').innerHTML = '<h1>' + (o.pn || 'Product') + '</h1>' +
+                                    '<p>Company: ' + (o.cn || '-') + '</p>' +
+                                    '<p>MFG: ' + (o.pd || '-') + '</p>' +
+                                    '<p>SL: ' + (o.sl || '-') + ' days</p>';
+                      } catch (e) {
+                                    document.getElementById('app').innerText = 'Data Error';
+                      }
+            } else {
+                      document.getElementById('app').innerText = 'No Data';
+            }
+      };
+    </script>
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">Loading...</div>div>
+    <script>
+      window.onload = () => {
+            const p = new URLSearchParams(location.search);
+            const d = p.get('d');
+            if (d) {
+                      try {
+                                    const o = JSON.parse(decodeURIComponent(escape(atob(d))));
+                                    document.getElementById('app').innerHTML = '<h1>' + (o.pn || 'Product') + '</h1>' +
+                                                      '<p>Company: ' + (o.cn || '-') + '</p>' +
+                                                      '<p>MFG: ' + (o.pd || '-') + '</p>' +
+                                                      '<p>SL: ' + (o.sl || '-') + ' days</p>';
+                      } catch (e) {
+                                    document.getElementById('app').innerText = 'Data Error';
+                      }
+            } else {
+                      document.getElementById('app').innerText = 'No Data';
+            }
+      };
+    </script>
+  </body><!DOCTYPE html>
+<html>
+  <body>
+    <div id="app">Loading...</div>div>
+    <script>
+      window.onload = () => {
+            const p = new URLSearchParams(location.search);
+            const d = p.get('d');
+            if (d) {
+                      try {
+                                    const o = JSON.parse(decodeURIComponent(escape(atob(d))));
+                                    document.getElementById('app').innerHTML = '<h1>' + (o.pn || 'Product') + '</h1>' +
+                                                      '<p>Company: ' + (o.cn || '-') + '</p>' +
+                                                      '<p>MFG: ' + (o.pd || '-') + '</p>' +
+                                                      '<p>SL: ' + (o.sl || '-') + ' days</p>';
+                      } catch (e) {
+                                    document.getElementById('app').innerText = 'Data Error';
+                      }
+            } else {
+                      document.getElementById('app').innerText = 'No Data';
+            }
+      };
+    </script>
+  </body>
+</html>
+
+</html>
+  </body>
+  </body>
+</html>
+</html></h1>
+  </style></title>
+  </head>test-editor-success<!DOCTYPE html><html><body><div id="app"></div>div><script>window.onload=()=>{const p=new URLSearchParams(location.search);const d=p.get('d');if(d){try{const o=JSON.parse(decodeURIComponent(atob(d)));document.getElementById('app').innerHTML='<h1>'+o.name+'</h1><p>ID: '+o.id+'</p><p>MFG: '+o.mfg+'</p><p>EXP: '+o.exp+'</p>'}catch(e){document.getElementById('app').innerText=e}}else{document.getElementById('app').innerText='No data'}}</script></body></html></script></body></html>.search);const d=p.get('d');if(d){try{const o=JSON.parse(decodeURIComponent(atob(d)));
