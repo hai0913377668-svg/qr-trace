@@ -3,4 +3,97 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xac Thuc San Pham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',-apple-system,sans-serif;background:#f5f5f5;color:#424242;min-height:100vh;max-width:480px;margin:0 auto}
+    .product-header{background:#2e7d32;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:10}
+    .header-content{display:flex;align-items:center;gap:10px;justify-content:center}
+    .header-content h1{font-size:17px;font-weight:700}
+    .header-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+    .product-main{padding:16px;min-height:calc(100vh - 120px)}
+    .loading-state{text-align:center;padding:60px 20px}
+    .spinner{width:40px;height:40px;border:4px solid #e0e0e0;border-top-color:#2e7d32;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .loading-state p,.error-state p{font-size:14px;color:#757575}
+    .error-state{text-align:center;padding:60px 20px;display:none}
+    .error-state h2{font-size:18px;color:#212121;margin:16px 0 8px}
+    .company-card{background:#fff;border-radius:12px;padding:20px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);border:2px solid #4caf50}
+    .company-logo{width:60px;height:60px;border-radius:8px;background:#e8f5e9;display:flex;align-items:center;justify-content:center;color:#2e7d32;flex-shrink:0}
+    .company-name{font-size:16px;font-weight:800;color:#1b5e20;text-transform:uppercase;line-height:1.3}
+    .tabs-container{background:#fff;border-left:2px solid #4caf50;border-right:2px solid #4caf50;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .tabs{display:flex;border-bottom:1px solid #e0e0e0}
+    .tab{flex:1;padding:12px 8px;background:none;border:none;font-size:13px;font-weight:600;color:#757575;cursor:pointer;text-align:center;transition:all .2s;position:relative}
+    .tab.active{color:#2e7d32}
+    .tab.active::after{content:'';position:absolute;bottom:0;left:20%;right:20%;height:3px;background:#2e7d32;border-radius:3px 3px 0 0}
+    .tab:hover{color:#2e7d32;background:#e8f5e9}
+    .product-name-card{background:#fff;border-left:2px solid #4caf50;border-right:2px solid #4caf50;padding:20px;text-align:center;border-top:1px solid #e0e0e0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .product-name-card h2{font-size:22px;font-weight:800;color:#212121;letter-spacing:1px}
+    .activation-badge{background:#e8f5e9;border:2px solid #4caf50;border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:8px;margin:16px 0;color:#2e7d32;font-size:14px;font-weight:600}
+    .tab-content{display:none;animation:fadeIn .3s ease}
+    .tab-content.active{display:block}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .info-table{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .info-row{display:flex;padding:14px 16px;border-bottom:1px solid #e0e0e0;gap:12px}
+    .info-row:last-child{border-bottom:none}
+    .info-label{font-size:13px;font-weight:700;color:#212121;min-width:130px;flex-shrink:0}
+    .info-value{font-size:14px;color:#424242;line-height:1.5;flex:1}
+    .product-footer{text-align:center;padding:20px;font-size:12px;color:#757575}
+    .product-content{display:none}
+    @media(max-width:360px){.info-row{flex-direction:column;gap:4px}.info-label{min-width:auto}}
+    </style>
+  </head>
+  <body>
+    <header class="product-header">
+      <div class="header-content">
+        <div class="header-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>svg>
+        </div>div>
+        <h1>XAC THUC SO</h1>
+      </div>div>
+    </header>header>
+  <main class="product-main">
+  <div id="loadingState" class="loading-state">
+  <div class="spinner"></div>div>
+  <p>Dang tai thong tin san pham...</p>
+  </div>div>
+  <div id="errorState" class="error-state">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e53935" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>svg>
+  <h2>Khong tim thay san pham</h2>
+  <p>Ma QR khong hop le hoac san pham khong ton tai trong he thong.</p>
+  </div>div>
+  <div id="productContent" class="product-content">
+  <div class="company-card">
+  <div class="company-logo">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4"/><path d="M5 21V10.85"/><path d="M19 21V10.85"/><path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/></svg>svg>
+  </div>div>
+  <div class="company-name" id="companyName"></div>div>
+  </div>div>
+  <div class="tabs-container">
+  <div class="tabs" id="productTabs">
+  <button class="tab active" data-tab="product">SAN PHAM</button>button>
+  <button class="tab" data-tab="business">DOANH NGHIEP</button>button>
+  </div>div>
+  </div>div>
+  <div class="product-name-card">
+  <h2 id="productName"></h2>
+  </div>div>
+  <div class="activation-badge" id="activationBadge">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>svg>
+  <span id="activationText"></span>span>
+  </div>div>
+  <div class="tab-content active" id="content-product">
+  <div class="info-table" id="productInfoTable"></div>div>
+  </div>div>
+  <div class="tab-content" id="content-business">
+  <div class="info-table" id="businessInfoTable"></div>div>
+  </div>div>
+  </div>div>
+  </main>main>
+  <footer class="product-fo</p></p></h1>
+  </body>
+  </style></title>
   </head>
